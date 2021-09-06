@@ -1,5 +1,5 @@
 import React from "react";
-import {  BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Draggable  from "./Components/Draggable/Draggable";
 const App = () => {
   return (

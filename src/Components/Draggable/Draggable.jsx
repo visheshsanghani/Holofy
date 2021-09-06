@@ -61,7 +61,6 @@ const Draggable = () => {
         right: 0,
         top: 0,
       });
-
       setQuadrant(2);
     }
     // If the video is dragged to 3rd Quadrant
@@ -70,7 +69,6 @@ const Draggable = () => {
         left: 0,
         bottom: 0,
       });
-
       setQuadrant(3);
     }
     // If the video is dragged to 4th Quadrant
@@ -79,7 +77,6 @@ const Draggable = () => {
         right: 0,
         bottom: 0,
       });
-
       setQuadrant(4);
     }
     setDragging(false);
@@ -117,7 +114,6 @@ const Draggable = () => {
         left: 0,
         top: 0,
       });
-
       setQuadrant(1);
     }
     // If the video is dragged to 2nd Quadrant
@@ -126,7 +122,6 @@ const Draggable = () => {
         right: 0,
         top: 0,
       });
-
       setQuadrant(2);
     }
     // If the video is dragged to 3rd Quadrant
@@ -135,7 +130,6 @@ const Draggable = () => {
         left: 0,
         bottom: 0,
       });
-
       setQuadrant(3);
     }
     // If the video is dragged to 4th Quadrant
@@ -144,7 +138,6 @@ const Draggable = () => {
         right: 0,
         bottom: 0,
       });
-
       setQuadrant(4);
     }
     setDragging(false);
