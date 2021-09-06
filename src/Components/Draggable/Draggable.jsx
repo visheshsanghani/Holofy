@@ -21,6 +21,17 @@ const Draggable = () => {
     setPlayToogler(false);
   }, [quadrant]);
 
+  const TooglePlay = () => {
+    if (startQuadrant === quadrant)
+      if (!playToogler) {
+        videoRef.current.play();
+        setPlayToogler((playToogler) => !playToogler);
+      } else {
+        videoRef.current.pause();
+        setPlayToogler((playToogler) => !playToogler);
+      }
+  };
+
   // Dweb Functionality - triggered as soon the video is dragged
   const handleDragStart = (e) => {
     setStartQuadrant(quadrant);
@@ -141,17 +152,6 @@ const Draggable = () => {
       setQuadrant(4);
     }
     setDragging(false);
-  };
-
-  const TooglePlay = () => {
-    if (startQuadrant === quadrant)
-      if (!playToogler) {
-        videoRef.current.play();
-        setPlayToogler(!playToogler);
-      } else {
-        videoRef.current.pause();
-        setPlayToogler(!playToogler);
-      }
   };
 
   return (
