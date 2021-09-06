@@ -14,8 +14,9 @@ const Draggable = () => {
   // Video Ref to control play/pause in video
   let videoRef = useRef(null);
 
-  // useEffect to be called everytime a change in Quadrant
-  // Pause the video
+  // useEffect to be called everytime a change in Quadrant ,Pause the video
+  // Cannot set VideoPosition in useEffect, because if the quadrant does not change
+  // the video stays hanging in the given quadrant
   useEffect(() => {
     videoRef.current.pause();
     setPlayToogler(false);
@@ -58,6 +59,8 @@ const Draggable = () => {
     const yAxisPointer = e.clientY;
     const leftWidth = window.innerWidth / 2;
     const topHalf = window.innerHeight / 2;
+    // Cannot set VideoPosition in useEffect, because if the quadrant does not change
+    // the video stays hanging in the given quadrant
     // If the video is dragged to 1st Quadrant
     if (xAxisPointer < leftWidth && yAxisPointer < topHalf) {
       setVideoPosition({
@@ -119,6 +122,8 @@ const Draggable = () => {
     const yAxisPointer = e.changedTouches[0].clientY;
     const leftWidth = window.innerWidth / 2;
     const topHalf = window.innerHeight / 2;
+    // Cannot set VideoPosition in useEffect, because if the quadrant does not change
+    // the video stays hanging in the given quadrant
     // If the video is dragged to 1st Quadrant
     if (xAxisPointer < leftWidth && yAxisPointer < topHalf) {
       setVideoPosition({
